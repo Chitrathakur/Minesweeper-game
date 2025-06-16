@@ -8,13 +8,13 @@ body {
     align-items: center;
     flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #f0f0f0;
     min-height: 100vh;
 }
 
 .title {
-    margin: 20px;
+    margin: 1px;
     background: linear-gradient(to right, #0ff1ce, #00d4ff);
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -22,19 +22,19 @@ body {
 
 .subtext {
     color: #aaa;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 10px;
 }
 
 .board {
     display: inline-grid;
-    padding: 10px;
-    border-radius: 12px;
-    grid-template-columns: repeat(var(--size), 60px);
-    grid-template-rows: repeat(var(--size), 60px);
-    gap: 5px;
+    padding: 8px;
+    border-radius: 8px;
+    grid-template-columns: repeat(var(--size), 38px);
+    grid-template-rows: repeat(var(--size), 38px);
+    gap: 3px;
     background: #1a1a2e;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
 }
 
 .board > * {
@@ -51,6 +51,27 @@ body {
     user-select: none;
     transition: background-color 0.2s ease;
 }
+
+#reload {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background: linear-gradient(to right, #0ff1ce, #00d4ff);
+    color: #111118;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+#reload:hover {
+    background: linear-gradient(to right, #00d4ff, #0ff1ce);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
 
 /* Hidden cell */
 .board > [data-status="Hidden"] {
