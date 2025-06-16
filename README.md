@@ -2,7 +2,7 @@
 
 This is a web-based implementation of the classic **Minesweeper** game, built using **HTML, CSS, and JavaScript**.
 
-🕹️ **Play it here:** [Live Demo](https://your-username.github.io/minesweeper-game/)
+🕹️ **Play it here:**  https://chitrathakur.github.io/Minesweeper-game/
 
 ## 🎮 Features
 - Randomly generated minefield
@@ -18,6 +18,6 @@ This is a web-based implementation of the classic **Minesweeper** game, built us
 
 ## 🚀 How to Play
 1. Click on tiles to reveal them.
-2. Mark suspected mines with right-click (or long tap on mobile).
+2. Mark suspected mines with right-click.
 3. Avoid clicking on a mine 💥
 4. Reveal all safe tiles to win!
