@@ -2,8 +2,8 @@
 
 import {TILE_STATUSES, createBoard, markTile, revealTile, checkWin, checkLose,} from './minesweeper.js'
 
-const BOARD_SIZE = 9
-const NUMBER_OF_MINES = 9
+const BOARD_SIZE = 10
+const NUMBER_OF_MINES = 10
 
 const board = createBoard(BOARD_SIZE, NUMBER_OF_MINES)
 const boardElement = document.querySelector('.board')
@@ -63,6 +63,12 @@ function checkGameEnd() {
 function stopProp (e) {
     e.stopImmediatePropagation()
 }
+
+// RELOAD GAME FUNCTION
+document.getElementById("reload").addEventListener("click", () => {
+    location.reload(); // This simply reloads the page
+});
+
 
 
 // 1. populate the board with tiles/minds -> CHECK
