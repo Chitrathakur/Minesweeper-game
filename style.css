@@ -1,101 +1,109 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
-    margin: 0;
-    background: linear-gradient(135deg, #1e1e2f, #111118);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 2.5rem;
-    color: #f0f0f0;
-    min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  background: linear-gradient(135deg, #1e1e2f, #111118);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.5rem;
+  color: #f0f0f0;
+  min-height: 100vh;
 }
 
 .title {
-    margin: 1px;
-    background: linear-gradient(to right, #0ff1ce, #00d4ff);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  margin: 1px;
+  background: linear-gradient(to right, #0ff1ce, #00d4ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subtext {
-    color: #aaa;
-    font-size: 1rem;
-    margin-bottom: 10px;
+  color: #aaa;
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
 .board {
-    display: inline-grid;
-    padding: 8px;
-    border-radius: 8px;
-    grid-template-columns: repeat(var(--size), 38px);
-    grid-template-rows: repeat(var(--size), 38px);
-    gap: 3px;
-    background: #1a1a2e;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  display: inline-grid;
+  padding: 8px;
+  border-radius: 8px;
+  grid-template-columns: repeat(var(--size), 40px);
+  grid-template-rows: repeat(var(--size), 40px);
+  gap: 3px;
+  background: #1a1a2e;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
 }
 
 .board > * {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: white;
-    border: 2px solid #444;
-    border-radius: 6px;
-    user-select: none;
-    transition: background-color 0.2s ease;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+  border: 2px solid #444;
+  border-radius: 6px;
+  user-select: none;
+  transition: background-color 0.2s ease;
 }
 
 #reload {
-    padding: 10px 20px;
-    margin-top: 20px;
-    background: linear-gradient(to right, #0ff1ce, #00d4ff);
-    color: #111118;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  padding: 10px 20px;
+  margin-top: 20px;
+  background: linear-gradient(to right, #0ff1ce, #00d4ff);
+  color: #111118;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
 }
 
 #reload:hover {
-    background: linear-gradient(to right, #00d4ff, #0ff1ce);
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-    transform: scale(1.05);
+  background: linear-gradient(to right, #00d4ff, #0ff1ce);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  transform: scale(1.05);
 }
-
 
 /* Hidden cell */
 .board > [data-status="Hidden"] {
-    background: linear-gradient(to bottom right, #3a3a4f, #2b2b3a);
-    cursor: pointer;
-    box-shadow: inset 0 0 5px #555;
+  background: linear-gradient(to bottom right, #3a3a4f, #2b2b3a);
+  cursor: pointer;
+  box-shadow: inset 0 0 5px #555;
 }
 
 /* Mine cell */
 .board > [data-status="Mine"] {
-    background-color: #ff3c38;
-    color: black;
-    box-shadow: 0 0 10px #ff3c38;
+  background-color: #ff3c38;
+  color: black;
+  box-shadow: 0 0 10px #ff3c38;
 }
 
 /* Number cell */
 .board > [data-status="Number"] {
-    background: #1e1e30;
-    color: #00f7ff;
+  background: #1e1e30;
+  color: #00f7ff;
 }
 
 /* Marked (flag) cell */
 .board > [data-status="Marked"] {
-    background-color: #ff9f1c;
-    color: black;
-    box-shadow: 0 0 8px #ff9f1c;
+  background-color: #ff9f1c;
+  color: black;
+  box-shadow: 0 0 8px #ff9f1c;
+}
+
+@media screen and (max-width: 600px) {
+  .board {
+    grid-template-columns: repeat(var(--size), 30px);
+    grid-template-rows: repeat(var(--size), 30px);
+  }
 }
