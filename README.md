@@ -2,7 +2,7 @@
 
 This is a web-based implementation of the classic **Minesweeper** game, built using **HTML, CSS, and JavaScript**.
 
-🕹️ **Play it here:**  https://chitrathakur.github.io/Minesweeper-game/
+🕹️ **Play it here :**  https://chitrathakur.github.io/Minesweeper-game/
 
 ## 🎮 Features
 - Randomly generated minefield
